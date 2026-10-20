@@ -1,0 +1,12 @@
+# Override device selection here or pass --serial to vigil-explore.
+device:
+  type: auto
+  serial: null
+
+app:
+  max_exploration_steps: 500
+
+# The offline LLM client reads VIGIL_LLM_MODEL, VIGIL_LLM_BASE_URL,
+# VIGIL_LLM_MODELS_URL, and VIGIL_LLM_API_KEY from the environment.
+# Add explicit model, base_url, models_url, or api_key values in a local config.
+llm: {}

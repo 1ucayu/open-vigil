@@ -1,0 +1,71 @@
+# Android SDK, AndroidX, and Material component priors used by Vigil.
+
+dialog_indicators:
+  classes:
+    - AlertDialog
+    - TimePickerDialog
+    - DatePickerDialog
+    - ProgressDialog
+    - BottomSheetDialog
+    - MaterialAlertDialogBuilder
+    - DialogFragment
+    - BottomSheetDialogFragment
+    - TimePicker
+    - DatePicker
+    - NumberPicker
+  resource_ids:
+    - "android:id/button1"
+    - "android:id/button2"
+    - "android:id/button3"
+
+
+# System error indicators.
+error_patterns:
+  - "Webpage not available"
+  - "Android System notif"
+  - "App isn't responding"
+  - "has stopped"
+  - "isn't responding"
+  - "Keep waiting"
+  - "Unfortunately"
+  - "No internet"
+
+
+# Scope policy defaults. Generic Android framework / launcher
+# packages — never an app-specific allowlist.
+# Android/AndroidX container classes whose direct children are repeated rows.
+#
+# Used to decide when an identity-less clickable is a LIST ROW rather than a
+# one-off control. A row may legitimately carry no resource_id, text, or
+# content-description of its own and be distinguishable only by what it
+# contains; a one-off anonymous control has no such excuse and stays
+# unbindable. These are SDK/AndroidX/Material classes only -- never an app's
+# own class or resource id.
+repeated_row_containers:
+  - "RecyclerView"
+  - "ListView"
+  - "GridView"
+  - "ExpandableListView"
+  - "ViewPager2"
+  - "ViewPager"
+
+scope:
+  android_system_packages:
+    - "android"
+    - "com.android.documentsui"
+    - "com.android.packageinstaller"
+    - "com.google.android.packageinstaller"
+    - "com.android.permissioncontroller"
+    - "com.google.android.permissioncontroller"
+    - "com.android.providers.media"
+    - "com.android.intentresolver"
+  system_ui_packages:
+    - "com.android.systemui"
+  launcher_patterns:
+    - "com.android.launcher*"
+    - "com.google.android.apps.nexuslauncher"
+    - "com.google.android.launcher"
+    - "com.sec.android.app.launcher"
+    - "com.miui.home"
+    - "com.huawei.android.launcher"
+    - "com.oneplus.launcher"

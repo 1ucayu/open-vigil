@@ -1,0 +1,58 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv*/
+build/
+dist/
+.ruff_cache/
+.mypy_cache/
+.coverage*
+htmlcov/
+
+# Local configuration and credentials
+.env
+.env.*
+configs/local*.yaml
+
+# Runtime evidence and generated models stay local
+/artifacts/
+/data/
+/models/
+/outputs/
+/output_docs/
+/efsm_results/
+/results/
+/results_figure/
+/archives/
+*.log
+*.apk
+*.aab
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.zip
+*.tar*
+
+# Research material and validation assets are not part of this repository
+/tests/
+/test/
+/benchmarks/
+/eval/
+/experiments/
+/fidelity_app/
+/mobile_agents/
+/overleaf/
+*.pdf
+*.tex
+*.bib
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
